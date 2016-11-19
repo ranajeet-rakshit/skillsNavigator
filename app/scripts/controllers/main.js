@@ -8,13 +8,14 @@
  * Controller of the skillsNavigatorApp
  */
 angular.module('skillsNavigatorApp')
-  .controller('MainCtrl', function (DataService) {
+  .controller('MainCtrl', function (DataService, $scope) {
 
-  	DataService.getTable('contact').
+  	DataService.getTable('banner').
 			then(getDataSuccess, getDataError);
 
 	function getDataSuccess(data){
-		console.log(data);
+		$scope.slides = data;
+		console.log($scope.slides);
 	}
 
 	function getDataError(err){
