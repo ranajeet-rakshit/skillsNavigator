@@ -9,13 +9,18 @@
  */
 angular.module('skillsNavigatorApp')
   .controller('MainCtrl', function (DataService, $scope) {
+    $scope.showSlide = false;
+
+    $scope.myInterval = 3000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
 
   	DataService.getTable('banner').
 			then(getDataSuccess, getDataError);
 
 	function getDataSuccess(data){
-		$scope.slides = data;
-		console.log($scope.slides);
+    console.log(data);
+    $scope.slides = data;
 	}
 
 	function getDataError(err){

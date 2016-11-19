@@ -20,9 +20,15 @@ $sql = "SELECT * FROM $tableName";
 $result = mysqli_query($conn, $sql);
 
 $temp = array();
-$temp = $result->fetch_assoc();
 
-echo $json_response = json_encode($temp);
+if($result->num_rows>0){
+	while ($row = $result->fetch_assoc()) {
+		$temp[] = $row;
+		//echo json_encode($row);
+	}
+}
+
+echo json_encode($temp);
 
 mysqli_close($conn);
 ?>
