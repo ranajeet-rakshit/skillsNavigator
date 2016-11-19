@@ -6,7 +6,7 @@ angular.module('skillsNavigatorApp')
 			return $http({
                 method:'GET',
                 //url:'http://localhost/skillsNavAPI/getTable.php?tableName='+tableName
-                url:'http://localhost/skillsNavigator/src/trunk/app/api/getTable.php?tableName='+tableName
+                url:'http://localhost/skillsNavAPI/getTable.php?tableName='+tableName
             })
             .then(responseSuccess)
             .catch(responseError);
