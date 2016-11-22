@@ -15,11 +15,24 @@ angular.module('skillsNavigatorApp')
     $scope.noWrapSlides = false;
     $scope.active = 0;
 
-  	DataService.getTable('banner').
-			then(getDataSuccess, getDataError);
+    var tables='about_courses||banner||quotes';
+
+    DataService.getTables(tables).
+      then(getTablesSuccess, getTablesError);
+
+  function getTablesSuccess(data){
+    console.log(data);
+  }
+
+  function getTablesError(err){
+    console.log(err);
+  }
+  
+  /*DataService.getTable('banner').
+    then(getDataSuccess, getDataError);*/
+
 
 	function getDataSuccess(data){
-    console.log(data);
     $scope.slides = data;
 	}
 

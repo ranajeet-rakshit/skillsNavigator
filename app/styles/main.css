@@ -9,25 +9,21 @@ body {
   padding: 0;
 }
 
-#slides_control > div{
-  height: 200px;
-}
-img{
-  margin:auto;
-  width: 400px;
-}
-#slides_control {
-  position:absolute;
-  width: 400px;
-  left:50%;
-  top:20px;
- margin-left:-200px;
+.marginTop-30{
+  margin-top: -30px;
 }
 
+.carousel-img img{
+  width: 100%;
+  max-height: 550px;
+
+}
 .carousel-control{
-  visibility: hidden;
+  display: none;
 }
-
+.container{
+  max-width: 100% !important;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

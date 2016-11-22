@@ -12,12 +12,21 @@ angular.module('skillsNavigatorApp')
             .catch(responseError);
 		}
 
+        service.getTables = function(tables){
+            return $http({
+                method:'GET',
+                url:'http://localhost/skillsNavAPI/getTables.php?tables='+tables
+            })
+            .then(responseSuccess)
+            .catch(responseError);
+        }
+
 		function responseSuccess(response){
             return response.data;
         }
          
          function responseError(err){
-            return $q.reject("Error retrieving contents. (HTTP Status: "+err+")");
+            return $q.reject("Error retrieving contents. HTTP Status: ",err);
          }
 
          return service;
