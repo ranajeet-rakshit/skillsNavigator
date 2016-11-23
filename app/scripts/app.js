@@ -40,7 +40,31 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
-
+      .when('/pmkvy', {
+        templateUrl: 'views/pmkvy.html',
+        controller: 'pmkvyCtrl',
+        controllerAs: 'pmkvy'
+      })
+      .when('/placement_process', {
+        templateUrl: 'views/placement_process.html',
+        controller: 'PlacementProcessCtrl',
+        controllerAs: 'placementProcess'
+      })
+      .when('/working_model', {
+        templateUrl: 'views/working_model.html',
+        controller: 'WorkingModelCtrl',
+        controllerAs: 'workingModel'
+      })
+      .when('/courses_offered', {
+        templateUrl: 'views/courses_offered.html',
+        controller: 'CoursesOfferedCtrl',
+        controllerAs: 'courses'
+      })
+      .when('/requirements', {
+        templateUrl: 'views/requirements.html',
+        controller: 'RequirementsCtrl',
+        controllerAs: 'requirements'
+      })
       .otherwise({
         redirectTo: '/'
       });
