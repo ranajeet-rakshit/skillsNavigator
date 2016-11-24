@@ -15,30 +15,27 @@ angular.module('skillsNavigatorApp')
     $scope.noWrapSlides = false;
     $scope.active = 0;
 
-    var tables='about_courses||banner||quotes';
+    var tables='about_courses||banner||quotes||pmkvy_char_points||what_we_do||'+
+    'why_skills_nav_detail||why_skills_nav_points||working_model_parent||working_skills_nav';
 
     DataService.getTables(tables).
       then(getTablesSuccess, getTablesError);
 
   function getTablesSuccess(data){
     console.log(data);
+    $scope.slides = data.banner;
+    $scope.quotes = data.quotes;
+    $scope.about_courses = data.about_courses;
   }
 
   function getTablesError(err){
     console.log(err);
   }
+
+  DataService.getTable('why_skills_nav').then(function(res){
+    console.log(res);
+  },function(err){});
   
-  /*DataService.getTable('banner').
-    then(getDataSuccess, getDataError);*/
-
-
-	function getDataSuccess(data){
-    $scope.slides = data;
-	}
-
-	function getDataError(err){
-		console.log(err);
-	}
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
