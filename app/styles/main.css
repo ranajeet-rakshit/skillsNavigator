@@ -24,7 +24,8 @@ li a{
   color: #101010 !important;
 }
 .header{
-  border-bottom: none !important;
+  margin-top: 40px;
+  border-bottom: 1px solid black;
   margin-bottom: 0 !important;
 }
 

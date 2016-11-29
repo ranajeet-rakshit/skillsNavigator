@@ -29,7 +29,7 @@ angular.module('skillsNavigatorApp')
     $scope.about_courses = data.about_courses;
     $timeout(function(){
       $scope.loading = false;
-    },3000);
+    },2000);
   }
 
   function getTablesError(err){
