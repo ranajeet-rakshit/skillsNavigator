@@ -5,6 +5,11 @@
   padding: 0.2em 0;
 }
 
+.panel-heading{
+  background-color: darkgreen !important;
+  color: orange !important;
+}
+
 .centered {
   position: fixed;
   top: 50%;
