@@ -8,10 +8,11 @@
  * Controller of the skillsNavigatorApp
  */
 angular.module('skillsNavigatorApp')
-  .controller('ServicesCtrl', function ($scope, DataService) {
+  .controller('ServicesCtrl', function ($scope, DataService, $timeout) {
 
   	var tables='about||what_we_do||pmkvy||why_skills_nav||pmkvy_charecteristics||pmkvy_char_points';
 
+    $scope.loading = true;
 
     DataService.getTables(tables).
       then(getTablesSuccess, getTablesError);
@@ -24,10 +25,14 @@ angular.module('skillsNavigatorApp')
     	$scope.whySkillsNav = res.why_skills_nav;
     	$scope.pmkvy_overview = res.pmkvy_charecteristics;
     	$scope.pmkvyCharPoints = res.pmkvy_char_points;
+      $timeout(function(){
+        $scope.loading = false;
+      },1000);
     }
 
     function getTablesError(err){
     	console.log(err);
+      $scope.loading = false;
     }
 
 
