@@ -1,48 +1,37 @@
 <div>
   <img class='headerImage img-responsive' src="images/header.jpg">
 </div>
+
 <div class='panel panel-success' style='margin-top:20px;'>
   <div class='panel-heading'>
-    <h2>What We Do</h2>
+    <h2>Our Services</h2>
   </div>
   <div class='panel-body'>
-    <p>We share a common desire to bring about social change by empowering the unemployed and out-of-work youth by training them on vocational skills to make them <strong>Eduployable [Educated + Employable]</strong>.</p>
-
-    <p>This endeavor in turn, is aimed at giving a huge boost to the up scaling economy of the nation by making available, much-needed skilled manpower to the job market.</p>
-    
-    <p>Skills Navigator was launched in 2015, and over the years has successfully delivered in the vocational skills space leading to employment for hundreds. The organizations core goal has evolved make self-sufficient, the youth from smaller cities and towns of India who may have completed basic education, but have limited or no skills to make them employable. Many of these boys and girls are forced to seek employment in the larger towns and cities far from their families and support systems and often in unorganized sectors where there is no growth in career or salaries.</p>
+    <p ng-repeat='service in services'>{{service.desc}}</p>
   </div>
 </div>
 
 <div class='panel panel-success' style='margin-top:20px;'>
   <div class='panel-heading'>
-    <h2>Why SKILLS NAVIGATOR</h2>
+    <h2>Why Skills Navigator</h2>
   </div>
   <div class='panel-body'>
-    <p>Albeit there are numerous training academies mushrooming around the country, SKILLS NAVIGATOR is your best bet when it comes to the holistic development. From our infrastructure & curriculum to our linkages and associations, every single thing has thoroughly been worked to be a class apart.</p>
+    <p ng-repeat='item in whySkillsNav'>{{item.desc}}</p>
+  </div>
+</div>
 
-    <p>SKILLS NAVIGATOR is a NSDC partner organization which is a hallmark of trust in skill development. We have also our assessment body to keep a check on the quality of our programs and methodology. Our programs are largely market driven and job oriented with a high degree of relevance to the industrial practices. SKILSS NAVIGATOR is an assurance of the quality in imparting skill development training to the unqualified youth.</p>
-
-    <p>When it comes to our infrastructure, we have our own operated centers all across the country along with the centers we run in collaboration with third party. All of our centers are well equipped with all the necessary resources. We only charge a nominal fee for our programs while distributing free student kits and tool kits for our non technical and technical courses respectively.
-    </p>
-
-    <p>SKILLS NAVIGATOR only deploys highly experienced and best in class trainers to impart the skill training. Our rigorous selection process for our trainers raises the delivery quality to a new level unmatched by any other training organization in the country. Our well researched pedagogy is simple and more effective in order to bring all students on the same plank while imparting training.</p>
-
-    <p>We have deep academic and placement associations with renowned organizations both in public as well as in private sectors. These organizations are from varied sectors such as Retail, Construction, IT, Telecom, Hospitality etc.</p>
-
-    <p>In a nut shell, joining SKILLS NAVIGATOR would be one of the best decisions of your life.</p>
-
-    <h2>Why Skills NAvigator :</h2>
-
-    <ol type="1">
-  		<li>We are committed to providing maximum placement assistance</li>
-  		<li>Our courses are job oriented</li>
-  		<li>All our programs are industry relevant</li>
-  		<li>Industry relevant course material is prepared by industry experts</li>
-  		<li>We offer free classes.</li>
-  		<li>All Skills navigator centers offer standardized toolkits and equipments</li>
-  		<li>We provide free student kits</li>
-  		<li>Skills Navigator is a partner of <strong>NSDC</strong></li>
-  	</ol>  
+<div class='panel panel-success' style='margin-top:20px;'>
+  <div class='panel-heading'>
+    <h2>Pradhan Mantri Kaushal Vikas Yojana (PMKVY)</h2>
+  </div>
+  <div class='panel-body'>
+    <p>{{pmkvy.description}}</p>
+    <p>{{pmkvy.objective}}</p>
+    <p ng-repeat='item in pmkvy_overview'>{{item.desc}}</p>
+    <div>
+      <ul>
+        <li ng-repeat='points in pmkvyCharPoints'>{{points.point}}</li>
+      </ul>
+    </div>
   </div>
 </div>
