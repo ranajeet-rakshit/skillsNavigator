@@ -4,16 +4,14 @@
 </div>
 <div class='panel panel-success' style='margin-top:20px;'>
   <div class='panel-heading'>
-    <h2>Contact Us</h1>
+    <h2>Contact Us!</h2>
   </div>
-  <div class='panel-body'>
-  	<h4>Head Office</h4>
-
-    <p>1735, Street No-10A</p>
-	<p>Laxman Vihar, PH-II</p>
-	<p>Gurgaon – 122001</p>
-	<p>Phone - +91 9711464710, +91 9911946681</p>
-	<p>Email – info.skillsnavigator@gmail.com</p>
-	<p>Website - www.skillsnavigator.in</p>
-   </div>
+  <div class='panel-body' ng-repeat='item in contact'>
+    <p>{{item.address_line_one}}</p>
+    <p>{{item.address_line_two}}</p>
+    <p>{{item.city}}-{{item.pin}}</p>
+    <p>{{item.phone}}</p>
+    <p>{{item.email}}</p>
+    <p>{{item.website}}</p>
+  </div>
 </div>
