@@ -6,9 +6,7 @@
   <div class='panel-heading'>
     <h2>Placement Process</h2>
   </div>
-  <div class='panel-body'>
-  	<p>At Skills Navigator, we do not talk about placements in absolute terms. For us placements are a part of the whole process. An important imbibed step in the complete cycle of employability, that’s what the placement process is to us. We rigorously work on our program content and methodology to make it in sync with the industrial demands vis-à-vis the local aspirations and a good placement record is just a byproduct of this rigor.</p>
-  	<p>Our placement process start way before the job interviews take place. We start with the analysis to map the skills desired in the industry followed by program modification and customization. After that, we map the skill gaps among the people and modify our pedagogy to bridge those gaps and make the students at par with the expectations of the industry. Guest lecture from industry veterans along with the site visits make an important part of our curriculum. This is a continuous process which goes on and on and is completely market driven. So if anything changes or gets updated in the industry, it immediately gets reflected in our curriculum.</p>
-  	<p>Once we feel that our students are well equipped with the knowledge and skills required to thrive in an industrial scenario, we arrange job interviews and fairs for them. We have partnered with renowned organization to give employment to our qualified students. These companies belong to varied sectors from Retail to ITES, from Construction to Telecom.</p>
+<div class='panel-body' ng-repeat='item in placement_process'>
+    <p>{{item.desc}}</p>
   </div>
 </div>
