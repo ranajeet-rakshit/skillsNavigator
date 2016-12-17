@@ -7,23 +7,15 @@
     <h2>Working Model</h2>
   </div>
  
-<div class='panel-heading'> 
-  <h2>NSDC & SSC</h2>
-</div>
-
-  <div class='panel-body' ng-repeat='item in working_model_parent'>
+  <div class='panel-body'>
+  <h4>NSDC & SSC</h4>
     <ul>
-      <li>{{item.point_1}}</li>
+      <li ng-repeat='item in nsdc_ssc'>{{item.point}}</li>
     </ul>
-  </div>
 
-<div class='panel-heading'> 
-  <h2>SKILLS NAVIGATOR</h2>
-</div>
-
-  <div class='panel-body' ng-repeat='item in working_model_parent'>
+  <h4>SKILLS NAVIGATOR</h4>
     <ul>
-      <li>{{item.point_2}}</li>
+      <li ng-repeat='item in skills_navigator'>{{item.point}}</li>
     </ul>
   </div>
 </div>

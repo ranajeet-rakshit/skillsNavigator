@@ -8,31 +8,20 @@
   </div>
   
   <div class='panel-body'>
+
+  <h3>Requirements for Admissions</h3>
+
+    <ul>
+      <li ng-repeat='item in admission_requirements'>{{item.requirement}}</li>
+    </ul>  
+
+  <h3>Infrastructure Requirement</h3>  
+
+  <h4>General</h4>
   
-	<h2>Requirements for Admissions</h2>
-
     <ul>
-  		<li>Enrollment Form</li>
-  		<li>Age Proof (10th Certificate/Date of Birth/Passport/Pan Card)</li>
-  		<li>Qualification Proof of Student (as per course)</li>
-  		<li>Passport Size Color Photograph</li>
-  		<li>Aadhar Card</li>
-  		<li>Bank Details – New Bank Account to open</li>
-  		<li>Assessment Fee</li>
-  	</ul>  
-
-	<h2>Infrastructure Requirement</h2>
-
-	<h3>General</h3>
-
-    <ul>
-  		<li>Classrooms equipped with seating capacity of at least 25 trainees</li>
-  		<li>Broadband internet connectivity with 512 mbps speed</li>
-  		<li>Biometric Attendance Machine and CCTV Camera</li>
-  		<li>LCD Projector</li>
-  		<li>Power back up (UPS & Genset)</li>
-  		<li>Printer, Scanner & Copier</li>
-  	</ul>  
-	<h3>Infrastructure as per courses being offered</h3>
+      <li ng-repeat='item in infrastructure_requirements'>{{item.requirement}}</li>
+    </ul>  
+    <h4>Infrastructure as per courses being offered</h4>
   </div>
 </div>

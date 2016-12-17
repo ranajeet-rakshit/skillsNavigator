@@ -9,7 +9,7 @@ angular.module('skillsNavigatorApp')
     $scope.noWrapSlides = false;
     $scope.active = 0;
 
-    var tables='working_model_parent';
+    var tables='nsdc_ssc||skills_navigator';
 
 
     DataService.getTables(tables).
@@ -17,7 +17,8 @@ angular.module('skillsNavigatorApp')
 
   function getTablesSuccess(data){
     console.log(data);
-    $scope.working_model_parent = data.working_model_parent;
+    $scope.nsdc_ssc = data.nsdc_ssc;
+    $scope.skills_navigator = data.skills_navigator;
     $timeout(function(){
       $scope.loading = false;
     },1000);

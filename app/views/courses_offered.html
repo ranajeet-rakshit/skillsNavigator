@@ -7,25 +7,18 @@
     <h2>Courses on Offer</h2>
   </div>
   
-  <div class='panel-body'>
+<div class='panel-body'>
   
-	<h2>In Following Sector we offer Course</h2>
+  <h3>In Following Sector we offer Course</h3>
 
     <ol type="1">
-  		<li>Agriculture</li>
-  		<li>Apparel, Made-ups & Home Furnishing</li>
-  		<li>Automotive</li>
-  		<li>Security</li>
-  		<li>Beauty & Wellness</li>
-  	</ol>  
+      <li ng-repeat='item in courses_offered'>{{item.course}}</li>
+    </ol>  
 
-<h2>About Courses</h2>
+  <h3>About Courses</h3>
 
     <ul>
-  		<li>As per the Job roles given in the NOS</li>
-  		<li>Average Duration 45 days</li>
-  		<li>Assessment Fee paid by Govt.</li>
-  		<li>Assessment is done by the Sector Skill Council</li>
-  	</ul>  
+      <li ng-repeat='item in about_courses'>{{item.desc}}</li>
+    </ul>  
   </div>
 </div>
