@@ -65,6 +65,21 @@ angular
         controller: 'RequirementsCtrl',
         controllerAs: 'requirements'
       })
+      .when('/pmkvy', {
+        templateUrl: 'views/pmkvy.html',
+        controller: 'pmkvyCtrl',
+        controllerAs: 'pmkvy'
+      })
+      .when('/ndlm', {
+        templateUrl: 'views/ndlm.html',
+        controller: 'ndlmCtrl',
+        controllerAs: 'ndlm'
+      })
+      .when('/esdm', {
+        templateUrl: 'views/esdm.html',
+        controller: 'esdmCtrl',
+        controllerAs: 'esdm'
+      })
       .otherwise({
         redirectTo: '/'
       });

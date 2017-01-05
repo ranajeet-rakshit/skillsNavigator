@@ -16,23 +16,25 @@ angular.module('skillsNavigatorApp')
     $scope.noWrapSlides = false;
     $scope.active = 0;
 
-    var tables='about||banner||pmkvy||why_skills_nav||what_we_do||contact';
+    var tables='about||banner||why_skills_nav||contact';
 
+    /*var slides={"banner":[{"id":"1","slide_url":"images/modi.jpg","alt":"Sample Image 1"},{"id":"2","slide_url":"images/farmer.jpg","alt":"Sample Image 2"},{"id":"3","slide_url":"images/education.jpg","alt":"Sample image 3"}]};
+    console.log(slides);
+    $scope.slides = slides.banner;*/
+
+    $scope.loading = false;
 
     DataService.getTables(tables).
       then(getTablesSuccess, getTablesError);
 
   function getTablesSuccess(data){
-    console.log(data);
     $scope.about = data.about;
     $scope.slides = data.banner;
-    $scope.whatWeDo = data.what_we_do;
     $scope.whySkillsNav = data.why_skills_nav;
     $scope.contact = data.contact;
-    $scope.pmkvy = data.pmkvy;
     $timeout(function(){
       $scope.loading = false;
-    },1000);
+    },3000);
   }
 
   function getTablesError(err){
