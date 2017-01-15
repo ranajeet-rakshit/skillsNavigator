@@ -6,6 +6,10 @@ body{
   background-size: 100% 100%;
 }
 
+.padding10{
+  padding: 10px !important;
+}
+
 .panel-body{
   background-image: url('../images/photo-background-optimized.jpg') !important;
   background-repeat: no-repeat;

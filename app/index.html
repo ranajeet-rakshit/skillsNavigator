@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -65,7 +66,22 @@
     <div ng-view=""></div>
     </div>
 
-
+    <footer style="text-align:center; height: 30px;background-color: black; color:orange;" ng-hide="loading">
+      <!-- <div style="background-color:grey;text-align:center;height:85px;color:white;" class='row'>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-center" style="margin-left:30%;">
+                <li><a ui-sref="about" href="#/about">About us</a></li>
+                <li><a ui-sref="services" href="#/services">Services offered</a></li> 
+                <li class="menu-item"><a ui-sref="jobsOffered" href="#/jobsOffered">Job Sector</a></li>
+                <li><a ui-sref="contact" href="#/contact">Contact us</a></li>
+                <li ng-hide="loggedIn"><a ui-sref="register" href="#/register">Register with us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div> -->
+    <div style="margin-bottom:10px;">All rights reserved - SkillsNavigator <i class="fa fa-copyright"></i> is a registered trade mark and unauthorized usage is strictly prohibited.</div>
+  </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
