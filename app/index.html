@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="skillsNavigatorApp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="skillsNavigatorApp"> <!-- style="background:url('images/background.jpeg');"> -->
+  <body ng-controller='LayoutCtrl'> <!-- style="background:url('images/background.jpeg');"> -->
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header" ng-controller='LayoutCtrl'>
+    <div class="header">
       <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:none;">
         <div class="container">
           <div class="navbar-header">

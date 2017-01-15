@@ -10,36 +10,41 @@
 angular.module('skillsNavigatorApp')
   .controller('MainCtrl', function (DataService, $scope, $timeout) {
     $scope.loading = true;
+    $scope.$emit("loading", true);
 
 
     $scope.myInterval = 3000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
 
-    var tables='about||banner||why_skills_nav||contact';
+    var tables='about||what_we_do||banner||why_skills_nav||contact';
 
     /*var slides={"banner":[{"id":"1","slide_url":"images/modi.jpg","alt":"Sample Image 1"},{"id":"2","slide_url":"images/farmer.jpg","alt":"Sample Image 2"},{"id":"3","slide_url":"images/education.jpg","alt":"Sample image 3"}]};
     console.log(slides);
     $scope.slides = slides.banner;*/
 
-    $scope.loading = false;
 
     DataService.getTables(tables).
       then(getTablesSuccess, getTablesError);
 
   function getTablesSuccess(data){
     $scope.about = data.about;
+    $scope.what_we_do = data.what_we_do;
     $scope.slides = data.banner;
     $scope.whySkillsNav = data.why_skills_nav;
-    $scope.contact = data.contact;
+    $scope.contact = data.contact[0];
+    console.log("about> ",$scope.about);
+    console.log("contact> ",$scope.contact);
     $timeout(function(){
       $scope.loading = false;
+      $scope.$emit("loading", false);
     },3000);
   }
 
   function getTablesError(err){
     console.log(err);
     $scope.loading = false;
+    $scope.$emit("loading", false);
   }
   
     this.awesomeThings = [

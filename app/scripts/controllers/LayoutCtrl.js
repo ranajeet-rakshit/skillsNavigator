@@ -9,9 +9,9 @@
  */
 angular.module('skillsNavigatorApp')
   .controller('LayoutCtrl', function (DataService, $scope, $timeout) {
-    $(document).ready(function(){
-      $scope.ready = true;
-      console.log("READY");
+    
+    $scope.$on("loading", function(event, status){
+      $scope.loading = status;
     });
 
     $scope.menuItems = {};

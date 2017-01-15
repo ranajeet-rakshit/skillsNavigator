@@ -1,5 +1,5 @@
 <loader loading='loading'></loader>
-<div class='row marginTop-0'>
+<div class='row marginTop-0' ng-hide='loading'>
   <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
     <div class="carousel-img" uib-slide ng-repeat="slide in slides track by slide.id" index="$index">
       <img src="{{slide.slide_url}}" style="margin:auto;">
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class='panel panel-success' style='margin-top:20px;'>
+<div class='panel panel-success' style='margin-top:20px;' ng-hide='loading'>
   <div class='panel-heading'>
     <h2>Why Skill Development</h2>
   </div>
@@ -20,17 +20,25 @@
   </div>
 </div>
 
-<!-- <div class='panel panel-success' style='margin-top:20px;'>
+<div class='panel panel-success' style='margin-top:20px;' ng-hide='loading'>
   <div class='panel-heading'>
-    <h2>Pradhan Mantri Kaushal Vikas Yojana (PMKVY)</h2>
+    <h2>About us</h2>
   </div>
-  <div class='panel-body' ng-repeat='item in pmkvy'>
-    <p>{{item.description}}</p>
-    <p>{{item.objective}}</p>
+  <div class='panel-body'>
+    <p ng-repeat='item in about'>{{item.desc}}</p>
   </div>
 </div>
 
+<div class='panel panel-success' style='margin-top:20px;' ng-hide='loading'>
+  <div class='panel-heading'>
+    <h2>What we do</h2>
+  </div>
+  <div class='panel-body'>
+    <p ng-repeat='item in what_we_do'>{{item.desc}}</p>
+  </div>
+</div>
 
+<!--
 <div class='panel panel-success' style='margin-top:20px;'>
   <div class='panel-heading'>
     <h2>What We Do</h2>
