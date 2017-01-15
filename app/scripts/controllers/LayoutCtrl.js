@@ -34,7 +34,6 @@ angular.module('skillsNavigatorApp')
 
 
     $scope.menuSelect = function(menuItem){
-      console.log(menuItem);
       angular.forEach(menuItems, function(item){
         $(item).removeClass('active');
       });

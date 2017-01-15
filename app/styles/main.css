@@ -21,6 +21,10 @@ body{
   box-shadow: 9px 10px 15px -5px black !important;
 }
 
+.black-shadow{
+  box-shadow: 9px 10px 15px -5px black !important;
+}
+
 .menu-item:hover{
   background-color: lightgreen;
 }

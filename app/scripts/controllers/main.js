@@ -28,13 +28,11 @@ angular.module('skillsNavigatorApp')
       then(getTablesSuccess, getTablesError);
 
   function getTablesSuccess(data){
-    console.log(data);
     $scope.about = data.about;
     $scope.what_we_do = data.what_we_do;
     $scope.slides = data.banner;
     $scope.whySkillsNav = data.why_skills_nav;
     $scope.contacts = data.contacts;
-    console.log("contact> ",$scope.contacts);
     $timeout(function(){
       $scope.loading = false;
       $scope.$emit("loading", false);
